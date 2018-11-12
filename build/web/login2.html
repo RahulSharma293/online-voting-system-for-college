@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+ div.top {
+  background: url(wall.jpg) repeat;
+  border: 2px solid black;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+li img {
+	display:block;
+	padding: 6px;
+}
+    body {font-family: Arial, Helvetica, sans-serif;}
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="index.html"><img src="img.png"></a></li>
+  <li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+</ul>
+    <h2>Login Form</h2>
+<form >
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required><br>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required><br>
+    <button type="submit">Login</button>
+    <p>Don't have an Account</p>
+    <a href='signup.html'>Sign Up</a>
+  </div>
+</form>
+</body>
+</html>
