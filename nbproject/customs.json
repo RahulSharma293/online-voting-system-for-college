@@ -1,8 +1,20 @@
 {
     "elements": {
-        "div": {},
-        "button": {},
-        "a": {},
+        "div": {
+            "attributes": {
+                "class": {}
+            }
+        },
+        "button": {
+            "attributes": {
+                "style": {}
+            }
+        },
+        "a": {
+            "attributes": {
+                "href": {}
+            }
+        },
         "i": {}
     },
     "attributes": {}

@@ -1,22 +1,8 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Sign-Up Page</title>
-        <script>
-            function validate()
-            {
-                var Pwd = document.form.password.value;
-                var Cpwd = document.form.confirm.value;
-                 if (Pwd != Cpwd)
-                {
-                    alert("Confirm Password should match with the Password");
-                    return false;
-                }
-                
-            }
-        </script>
-		<style>
-     	* {box-sizing:border-box}
+ <style>
+   
+* {box-sizing:border-box}
 body {font-family: Verdana,sans-serif;}
  div.top {
   background: url(wall.jpg) repeat;
@@ -49,74 +35,174 @@ li img {
 	display:block;
 	padding: 6px;
 }
-		body {
-            color:black;
-        }
-        
-        * {box-sizing: border-box}      
-		input[type=text], input[type=password],input[type=email],input[type=tel] {
-        width: 20%;
-        padding: 10px;
-        margin: 5px 0 22px 0;
-        display: inline-block;
-        border: none;
-        background: #f1f1f1;
-}#submit
-{
-  background-color: green;
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: black;
+    padding: 20px;
+    background-color: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: blue;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  body{
+    background-image:url(".jpeg");
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 1400px 700px;}
+* {box-sizing: border-box}
+
+
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+
+button {
+    background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 15%;
-    opacity: 2.9;
-    margin-bottom: 10px;
-    margin-left: 10px
+    width: 20%;
+    opacity: 0.9;
 }
-#submit:hover{
-            border: none;
-            background: #943126;
+
+button:hover {
+    opacity:1;
 }
-footer{
-            position: absolute;
-            bottom: 0px;
-            right: 0px;
-            text-align: right;
+
+
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
 }
-.container
-{
-padding : 19px;
+
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 10%;
 }
-.bg {
-    background-image: url("vote3.jpg");
-    height: 122%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+
+.container {
+    padding: 16px;
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
 }
 </style>
-</head>
-<body>
+ <body background="wall.jpeg">
 <ul>
   <li><a href="index.html"><img src="img.png"></a></li>
   <li><a href="index.html">Home</a></li>
 <li><a href="about.html">About</a></li>
 </ul>
-<div class="bg">
-		<form name="form" method="post" action="InfoAdd" onsubmit="return validate()" style="border:1px solid #ccc">
-             <div class="container">		  
-                 <p><center>Please fill in this form to create an account.</center></p>
-             <br>
-            <center><label for="Name" ><b>Name</b></label><br>
-            <input type="text" placeholder="Enter your Name"  name="Name" minlength=3 required size="5">
-            <br><label for="email" ><b>Email</b></label><br>
-            <input type="email" placeholder="Enter your Email" name ="email" required>
-            <br><label for="password" ><b>Password</b></label><br>
-            <input type="password" placeholder="Password" name="password" minlength="5" required> 
-            <br><label for="confirm"><b>Confirm Password<b></label><br>
-            <input type="password" placeholder="Confirm Password" name="confirm" minlength="8">
-           <center><input type="submit" id="submit" value ="Sign Up"><a href="login.jsp"></a></center>
-             </div></form>
-    </body>
+    <form action="sign" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <hr>
+    <centre>
+    <label for="email"><b>Email</b></label>
+    <br>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <br>
+ <label for="id"><b>ID</b></label>
+    <br>
+    <input type="text" placeholder="Enter ID" name="id" required>
+    <br>
+
+    <label for="psw"><b>Password</b></label>
+    <br>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+<br>
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <br>
+    <input type="password" placeholder="Repeat Password" name="psw-r" required>
+   <br> 
+   <div class="clearfix">
+     <a href="login2.html"><button type="button" value="cancel">Cancel</button></a>
+      <button type="submit" value="submit">submit</button>
+    </div>
+    </centre>
+  </div>
+</form>
+
+</body>
 </html>

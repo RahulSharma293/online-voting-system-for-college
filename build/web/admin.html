@@ -1,0 +1,182 @@
+<HTML>
+<HEAD>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+
+<TITLE >voting portal</TITLE>   
+</HEAD>
+<!-- Navigation -->
+<nav class="voting">
+<body background="wall.jpeg">
+    <style>
+<body>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+ div.top {
+  background: url(wall.jpg) repeat;
+  border: 10px solid black;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+li img {
+	display:block;
+	padding: 6px;
+}
+
+input[type=text], select, textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 10px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 50%;
+        margin-top: 0;
+    }
+}
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+   right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+</style>
+ <ul>
+   <li><a href="admin.html"><img src="img.png"></a></li>
+  <li><a href="admin.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li margin="right"><right><a href="index.html">Logout</a></right></li>
+  </UL>
+ <BR>
+<br>
+<centre>
+<button style="height:150px;width:200px" class="open-button" onclick="openForm()">ADD CANDIDATES</button>
+<a href="viewcandidates"><button style="height:150px;width:200px" >VIEW CANDIDATES</button></a>
+<a href="result"><button style="height:150px;width:200px" >RESULTS</button></a>
+</centre>
+<div class="form-popup" id="myForm">
+  <form action="addcandidate">
+    <div class="row">
+      <div class="col-25">
+        <label for="f_name">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="f_name" placeholder="Your name.." required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="l_name">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="l_name" placeholder="Your last name.." required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="yr">YEAR</label>
+      </div>
+      <div class="col-75">
+        <select id="year" name="yr">
+          <option value="2nd">2nd</option>
+          <option value="3rd">3rd</option>
+          <option value="4th">4th</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+      <label for="f_upload"> Select a file to upload</label>
+    </div>
+     <div class="col-75">
+        <input type="file" name="f_upload" value="fileupload" id="fileupload">
+      </div>
+      </div>
+        <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+      </div>
+    </div>
+ <div class="col-75">
+       <input type="submit" value="Submit">
+ </div>
+  
+  </form>
+    <a href="admin.html"><button type="cancel" value="cancel">Cancel</button></a>
+    <script>
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</HTML>
